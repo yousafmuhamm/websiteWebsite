@@ -1,0 +1,24 @@
+.svc-card {
+  background: var(--pine);
+  color: var(--cream);
+  padding: clamp(32px, 4.5vw, 56px);
+}
+
+.svc-card .eyebrow {
+  color: var(--gold-light);
+}
+
+.svc-card p {
+  color: rgba(245, 241, 233, 0.8);
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+.svc-card .h-card {
+  margin-top: 4px;
+}
+
+.home__properties-cta {
+  margin-top: clamp(40px, 5vw, 64px);
+  text-align: center;
+}

@@ -3,7 +3,7 @@
 - [x] Scaffold Vite + React + React Router project
 - [x] Global design system (CSS variables, fonts, base styles)
 - [x] Shared components: Header/Nav, Footer, PlaceholderImage, Button
-- [ ] Home page — all sections
+- [x] Home page — all sections
 - [ ] Properties page (West Pine Properties)
 - [ ] Partners page (West Pine Partners)
 - [ ] About page
