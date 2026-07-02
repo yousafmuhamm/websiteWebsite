@@ -26,10 +26,26 @@ function Header() {
     setMenuOpen(false)
   }, [pathname])
 
+  // iOS Safari mostly ignores `overflow: hidden` on body and still lets the
+  // page scroll behind a fixed overlay, letting the page bleed through the
+  // nav. Pinning the body in place with `position: fixed` (and restoring the
+  // scroll position on close) is the reliable cross-browser fix.
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    if (!menuOpen) return undefined
+    const scrollY = window.scrollY
+    const { body } = document
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollY}px`
+    body.style.left = '0'
+    body.style.right = '0'
+    body.style.overflow = 'hidden'
     return () => {
-      document.body.style.overflow = ''
+      body.style.position = ''
+      body.style.top = ''
+      body.style.left = ''
+      body.style.right = ''
+      body.style.overflow = ''
+      window.scrollTo(0, scrollY)
     }
   }, [menuOpen])
 
