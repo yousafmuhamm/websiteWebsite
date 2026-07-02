@@ -6,7 +6,7 @@
 - [x] Home page — all sections
 - [x] Properties page (West Pine Properties)
 - [x] Partners page (West Pine Partners)
-- [ ] About page
+- [x] About page
 - [ ] Contact page (with working client-side form validation)
 - [x] Testimonial carousel component (shared, reusable)
 - [ ] Responsive pass (mobile nav, grid collapse) on all 5 pages
