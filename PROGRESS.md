@@ -4,7 +4,7 @@
 - [x] Global design system (CSS variables, fonts, base styles)
 - [x] Shared components: Header/Nav, Footer, PlaceholderImage, Button
 - [x] Home page — all sections
-- [ ] Properties page (West Pine Properties)
+- [x] Properties page (West Pine Properties)
 - [ ] Partners page (West Pine Partners)
 - [ ] About page
 - [ ] Contact page (with working client-side form validation)
