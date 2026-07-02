@@ -17,7 +17,7 @@
 - [x] Transparent-over-hero header (no bg until scrolled) — was already gated on scrollY > 40; added stronger top scrim
 - [x] Looping muted background video on homepage hero
 - [x] Sticky-image scroll-story section — piloted on Home "For Property Owners"; extend to other sections only after client sign-off
-- [ ] Full-bleed imagery pass (remove boxed/bordered image containers)
+- [x] Full-bleed imagery pass (SiteImage component + frameless placeholders; borders kept on small grid cards)
 - [ ] Hover polish on cards, buttons, and nav links
 - [ ] Typography scale-up + tighter tracking on display headings
 - [ ] Full-screen mobile nav takeover

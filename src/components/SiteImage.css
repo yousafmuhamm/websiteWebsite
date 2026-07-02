@@ -1,0 +1,21 @@
+.img-frame {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-frame--zoom img {
+  transition: transform 0.7s var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-frame--zoom img {
+    transition: none;
+  }
+}

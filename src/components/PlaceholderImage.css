@@ -33,6 +33,10 @@
   border: none;
 }
 
+.ph--frameless {
+  border: none;
+}
+
 /* In fill mode the chip moves to a corner so it never sits under hero text. */
 .ph--fill .ph__chip {
   position: absolute;
