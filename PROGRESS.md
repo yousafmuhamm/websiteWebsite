@@ -12,8 +12,26 @@
 - [x] Responsive pass (mobile nav, grid collapse) on all 5 pages
 - [x] Final QA: every internal link works, npm run build succeeds, no console errors
 
+## Refinement Pass — OWO-inspired polish
+
+- [ ] Transparent-over-hero header (no bg until scrolled)
+- [ ] Looping muted background video on homepage hero
+- [ ] Sticky-image scroll-story section (replace one split section as a pilot)
+- [ ] Full-bleed imagery pass (remove boxed/bordered image containers)
+- [ ] Hover polish on cards, buttons, and nav links
+- [ ] Typography scale-up + tighter tracking on display headings
+- [ ] Full-screen mobile nav takeover
+- [ ] Wire in real placeholder photography from the provided resource list
+- [ ] Final cross-browser/responsive QA of the refinement pass
+
+Note on item 1: the header was already transparent until scrollY > 40 (the
+`.header--scrolled` class gates background/shadow/padding from one scroll
+listener). What reads as a "solid bar" at the top is the dark hero behind it.
+The refinement adds a stronger top scrim so nav text stays legible over
+bright video frames.
+
 ## Known issues
 
 (none)
 
-Build complete — see git log for full history.
+Original build complete — see git log for full history.
