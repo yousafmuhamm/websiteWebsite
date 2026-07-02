@@ -6,23 +6,48 @@ import IconFeatureGrid from '../components/IconFeatureGrid.jsx'
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import PropertyCard from '../components/PropertyCard.jsx'
 import Reveal from '../components/Reveal.jsx'
+import ScrollStory from '../components/ScrollStory.jsx'
 import TestimonialCarousel from '../components/TestimonialCarousel.jsx'
 import { FEATURED_PROPERTIES } from '../data/properties.js'
 import { HOME_TESTIMONIALS } from '../data/testimonials.js'
 import { WHY_WEST_PINE } from '../data/features.js'
 import heroVideo from '../assets/video/hero-suite-pan.mp4'
 import heroPoster from '../assets/images/bedroom-turndown.jpg'
+import imgKitchenIsland from '../assets/images/kitchen-island.jpg'
+import imgBedroomTurndown from '../assets/images/bedroom-turndown.jpg'
+import imgExteriorBlue from '../assets/images/exterior-dusk-blue.jpg'
 import './Home.css'
 
-const OWNER_CHECKLIST = [
-  'Listing creation and optimization',
-  'Dynamic pricing strategies',
-  'Guest screening and communication',
-  'Check-in and check-out management',
-  'Professional cleaning coordination',
-  'Property inspections',
-  'Maintenance oversight',
-  'Monthly reporting',
+const OWNER_STORY_STEPS = [
+  {
+    title: 'The listing works harder',
+    items: ['Listing creation and optimization', 'Dynamic pricing strategies'],
+    caption:
+      'A professional listing and pricing that moves with the market, not a rate someone set two summers ago.',
+    image: imgKitchenIsland,
+    alt: 'Bright kitchen with a large island in a furnished home',
+  },
+  {
+    title: 'Guests are handled',
+    items: ['Guest screening and communication', 'Check-in and check-out management'],
+    caption:
+      'Every guest vetted before they book, every arrival smooth, and the 11pm questions come to us instead of you.',
+    image: imgBedroomTurndown,
+    alt: 'Turned-down bed in a softly lit bedroom',
+  },
+  {
+    title: 'The home stays perfect',
+    items: [
+      'Professional cleaning coordination',
+      'Property inspections',
+      'Maintenance oversight',
+      'Monthly reporting',
+    ],
+    caption:
+      'Cleaned to standard between every stay, inspected on a schedule, and summed up for you in one monthly report.',
+    image: imgExteriorBlue,
+    alt: 'House exterior with warm lights at dusk',
+  },
 ]
 
 const RELOCATION_REASONS = [
@@ -187,32 +212,26 @@ function Home() {
         </div>
       </section>
 
-      {/* 5 — For property owners (dark band) */}
-      <section className="section section--dark">
-        <div className="container split--reverse split">
-          <Reveal>
-            <PlaceholderImage label="Photo — Property Exterior at Dusk" variant="dark" aspect="4/5" />
-          </Reveal>
-          <Reveal delay={150}>
+      {/* 5 — For property owners (dark band, pinned-image scroll story) */}
+      <section className="section section--dark home__story">
+        <div className="container">
+          <Reveal className="section-head">
             <span className="eyebrow">For Property Owners</span>
             <h2 className="h-section">Turn Your Property Into a High-Performing Asset</h2>
             <p style={{ marginTop: 24 }}>
               A luxury short-term rental is a real operation. Pricing moves week to week, guests
               have questions at 11pm, and the cleaning has to be perfect every single time. West
-              Pine Partners takes all of it off your plate:
+              Pine Partners takes all of it off your plate.
             </p>
-            <ul className="checklist">
-              {OWNER_CHECKLIST.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+          </Reveal>
+          <ScrollStory steps={OWNER_STORY_STEPS}>
             <p className="serif-line" style={{ marginBottom: 32 }}>
               You enjoy the revenue. We handle the work.
             </p>
             <Button to="/contact" variant="gold">
               Book a Consultation
             </Button>
-          </Reveal>
+          </ScrollStory>
         </div>
       </section>
 
