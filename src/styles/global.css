@@ -413,11 +413,14 @@ h1, h2, h3, h4 {
 .hero__overlay {
   position: absolute;
   inset: 0;
+  /* Heavier scrim at the very top keeps the floating nav legible
+     over bright video frames; lighter middle lets the media read. */
   background: linear-gradient(
     180deg,
-    rgba(22, 29, 24, 0.78) 0%,
-    rgba(22, 29, 24, 0.5) 45%,
-    rgba(22, 29, 24, 0.82) 100%
+    rgba(22, 29, 24, 0.82) 0%,
+    rgba(22, 29, 24, 0.55) 22%,
+    rgba(22, 29, 24, 0.38) 50%,
+    rgba(22, 29, 24, 0.78) 100%
   );
 }
 

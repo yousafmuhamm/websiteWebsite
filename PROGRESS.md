@@ -14,7 +14,7 @@
 
 ## Refinement Pass — OWO-inspired polish
 
-- [ ] Transparent-over-hero header (no bg until scrolled)
+- [x] Transparent-over-hero header (no bg until scrolled) — was already gated on scrollY > 40; added stronger top scrim
 - [ ] Looping muted background video on homepage hero
 - [ ] Sticky-image scroll-story section (replace one split section as a pilot)
 - [ ] Full-bleed imagery pass (remove boxed/bordered image containers)
