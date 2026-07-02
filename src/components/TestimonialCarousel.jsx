@@ -38,7 +38,7 @@ function TestimonialCarousel({ items }) {
         <div className="carousel__dots" role="tablist" aria-label="Testimonials">
           {items.map((item, i) => (
             <button
-              key={item.name}
+              key={`${item.role}-${i}`}
               type="button"
               role="tab"
               aria-selected={i === index}
