@@ -79,10 +79,7 @@ function About() {
       <CtaBand
         title="Let's Start the Conversation"
         copy="Looking for a furnished home, or thinking about handing off the management of yours? Call or write, and you'll hear back from an owner, not a queue."
-        buttons={[
-          { label: 'Find a Property', to: '/properties', variant: 'gold' },
-          { label: 'Book a Consultation', to: '/contact', variant: 'ghost-dark' },
-        ]}
+        buttons={[{ label: 'Book a Consultation', to: '/contact', variant: 'gold' }]}
         showContact
       />
     </>

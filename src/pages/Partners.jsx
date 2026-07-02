@@ -132,10 +132,7 @@ function Partners() {
       <CtaBand
         title="Let's Talk About Your Property"
         copy="A consultation is a conversation, not a sales pitch. We'll look at your property, your goals and the numbers, and tell you honestly what we think it can do."
-        buttons={[
-          { label: 'Book a Consultation', to: '/contact', variant: 'gold' },
-          { label: 'View Our Properties', to: '/properties', variant: 'ghost-dark' },
-        ]}
+        buttons={[{ label: 'Book a Consultation', to: '/contact', variant: 'gold' }]}
       />
     </>
   )

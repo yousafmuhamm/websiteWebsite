@@ -17,11 +17,15 @@ npm run build    # production bundle in dist/
 
 | Route | Page |
 | --- | --- |
-| `/` | Home — hero, services, featured properties, owners pitch, relocation, testimonials |
-| `/properties` | West Pine Properties — furnished accommodations + full portfolio |
+| `/` | Home — hero, services, owners pitch, relocation, testimonials |
 | `/partners` | West Pine Partners — property management |
 | `/about` | Story, values, testimonials |
 | `/contact` | Contact info + validated inquiry form |
+
+There is no dedicated properties/listings page — West Pine Properties is
+covered as a service description on the Home page (in "Our Services" and the
+insurance/relocation section), with all inquiries routed to `/contact`. No
+per-property data, cards, or images are used, on purpose.
 
 ## What still needs real content
 

@@ -1,18 +1,17 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button.jsx'
 import CtaBand from '../components/CtaBand.jsx'
 import IconFeatureGrid from '../components/IconFeatureGrid.jsx'
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
-import PropertyCard from '../components/PropertyCard.jsx'
 import Reveal from '../components/Reveal.jsx'
 import ScrollStory from '../components/ScrollStory.jsx'
 import TestimonialCarousel from '../components/TestimonialCarousel.jsx'
-import { FEATURED_PROPERTIES } from '../data/properties.js'
 import { HOME_TESTIMONIALS } from '../data/testimonials.js'
 import { WHY_WEST_PINE } from '../data/features.js'
-import heroVideo from '../assets/video/hero-suite-pan.mp4'
-import heroPoster from '../assets/images/bedroom-turndown.jpg'
+import heroVideo1 from '../assets/video/hero-reel-1.mp4'
+import heroVideo2 from '../assets/video/hero-reel-2.mp4'
+import heroPoster from '../assets/images/hero-reel-poster.jpg'
 import imgKitchenIsland from '../assets/images/kitchen-island.jpg'
 import imgBedroomTurndown from '../assets/images/bedroom-turndown.jpg'
 import imgExteriorBlue from '../assets/images/exterior-dusk-blue.jpg'
@@ -61,10 +60,14 @@ const RELOCATION_REASONS = [
   'Corporate relocations',
 ]
 
+// Two clips of the same property, played back to back and looped as a reel.
+const HERO_VIDEOS = [heroVideo1, heroVideo2]
+
 function Home() {
   const videoRef = useRef(null)
+  const [clipIndex, setClipIndex] = useState(0)
 
-  // Respect reduced-motion: leave the poster frame instead of looping video.
+  // Respect reduced-motion: leave the poster frame instead of playing.
   useEffect(() => {
     const video = videoRef.current
     if (!video) return undefined
@@ -82,7 +85,12 @@ function Home() {
       query.removeEventListener('change', apply)
       video.removeEventListener('playing', apply)
     }
-  }, [])
+  }, [clipIndex])
+
+  // Advance to the next clip in the reel when the current one finishes.
+  const handleClipEnded = () => {
+    setClipIndex((current) => (current + 1) % HERO_VIDEOS.length)
+  }
 
   return (
     <>
@@ -90,17 +98,18 @@ function Home() {
       <section className="hero">
         <video
           ref={videoRef}
+          key={HERO_VIDEOS[clipIndex]}
           className="hero__video"
           autoPlay
           muted
-          loop
           playsInline
           preload="metadata"
           poster={heroPoster}
           aria-hidden="true"
           tabIndex={-1}
+          onEnded={handleClipEnded}
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={HERO_VIDEOS[clipIndex]} type="video/mp4" />
         </video>
         <div className="hero__overlay" />
         <div className="container hero__content">
@@ -114,7 +123,7 @@ function Home() {
               management for the owners who trust us with theirs. Family-owned, based in Calgary.
             </p>
             <div className="btn-row">
-              <Button to="/properties" variant="gold">
+              <Button to="/contact" variant="gold">
                 Find a Property
               </Button>
               <Button to="/partners" variant="ghost-dark">
@@ -176,7 +185,7 @@ function Home() {
                 assignment, a hotel gets old fast. Our properties come furnished down to the
                 dishes, so you can just live.
               </p>
-              <Button to="/properties" variant="ghost-dark">
+              <Button to="/contact" variant="ghost-dark">
                 Learn More
               </Button>
             </Reveal>
@@ -199,29 +208,6 @@ function Home() {
               </Button>
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* 4 — Featured properties */}
-      <section className="section">
-        <div className="container">
-          <Reveal className="section-head">
-            <span className="eyebrow">Featured Properties</span>
-            <h2 className="h-section">Experience the West Pine Standard</h2>
-            <p className="lead">A small portfolio, kept carefully and presented properly.</p>
-          </Reveal>
-          <div className="grid-3">
-            {FEATURED_PROPERTIES.map((property, i) => (
-              <Reveal key={property.id} delay={i * 120}>
-                <PropertyCard property={property} />
-              </Reveal>
-            ))}
-          </div>
-          <Reveal className="home__properties-cta">
-            <Button to="/properties" variant="ghost-light">
-              View All Properties
-            </Button>
-          </Reveal>
         </div>
       </section>
 
@@ -343,7 +329,7 @@ function Home() {
         title="Let's Start the Conversation"
         copy="Looking for a furnished home, or thinking about handing off the management of yours? Call or write, and you'll hear back from an owner, not a queue."
         buttons={[
-          { label: 'Find a Property', to: '/properties', variant: 'gold' },
+          { label: 'Find a Property', to: '/contact', variant: 'gold' },
           { label: 'Book a Consultation', to: '/contact', variant: 'ghost-dark' },
         ]}
         showContact

@@ -25,8 +25,3 @@
 .svc-card .h-card {
   margin-top: 4px;
 }
-
-.home__properties-cta {
-  margin-top: clamp(40px, 5vw, 64px);
-  text-align: center;
-}

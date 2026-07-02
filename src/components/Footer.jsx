@@ -25,7 +25,6 @@ function Footer() {
           <h4 className="footer__heading">Quick Links</h4>
           <ul className="footer__list">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/properties">Properties</Link></li>
             <li><Link to="/partners">Partners</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>

@@ -46,4 +46,20 @@ bright video frames.
 
 (none)
 
+## Scope change: properties page removed
+
+- Removed the `/properties` route, `Properties.jsx`, the `PropertyCard`
+  component, and `src/data/properties.js` (the hardcoded per-property list).
+- Removed the "Featured Properties" section from the Home page.
+- Repointed every button that used to link to `/properties` ("Find a
+  Property", "Learn More" on the Properties service card, "View Our
+  Properties") to `/contact` instead, or removed the button where a
+  duplicate CTA already pointed to `/contact`.
+- Deleted the 3 stock photos that were only used by the removed property
+  cards; updated `MEDIA-CREDITS.md` accordingly.
+- Reason: no per-property listing/portfolio was requested in the client's
+  plan, and maintaining individual property cards (add/remove as homes are
+  bought or sold) isn't worth the upkeep for this site. The general West
+  Pine Properties service is still described on the Home page.
+
 Original build complete — see git log for full history.
