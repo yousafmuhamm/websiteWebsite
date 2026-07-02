@@ -413,7 +413,7 @@ h1, h2, h3, h4 {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 96svh;
+  min-height: 100svh;
   padding-top: 140px;
   padding-bottom: 80px;
   color: var(--cream);
@@ -564,7 +564,7 @@ h1, h2, h3, h4 {
   }
 
   .hero {
-    min-height: 88svh;
+    min-height: 100svh;
   }
 }
 
