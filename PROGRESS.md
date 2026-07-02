@@ -1,7 +1,7 @@
 # West Pine Strategies — Build Progress
 
 - [x] Scaffold Vite + React + React Router project
-- [ ] Global design system (CSS variables, fonts, base styles)
+- [x] Global design system (CSS variables, fonts, base styles)
 - [ ] Shared components: Header/Nav, Footer, PlaceholderImage, Button
 - [ ] Home page — all sections
 - [ ] Properties page (West Pine Properties)
