@@ -20,7 +20,7 @@
 - [x] Full-bleed imagery pass (SiteImage component + frameless placeholders; borders kept on small grid cards)
 - [x] Hover polish on cards, buttons, and nav links (hover-capable pointers only)
 - [x] Typography scale-up + tighter tracking on display headings
-- [ ] Full-screen mobile nav takeover
+- [x] Full-screen mobile nav takeover
 - [ ] Wire in real placeholder photography from the provided resource list
 - [ ] Final cross-browser/responsive QA of the refinement pass
 
