@@ -33,6 +33,14 @@
   border: none;
 }
 
+/* In fill mode the chip moves to a corner so it never sits under hero text. */
+.ph--fill .ph__chip {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  max-width: 60%;
+}
+
 .ph__chip {
   position: relative;
   z-index: 1;

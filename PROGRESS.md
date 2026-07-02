@@ -9,7 +9,7 @@
 - [x] About page
 - [x] Contact page (with working client-side form validation)
 - [x] Testimonial carousel component (shared, reusable)
-- [ ] Responsive pass (mobile nav, grid collapse) on all 5 pages
+- [x] Responsive pass (mobile nav, grid collapse) on all 5 pages
 - [ ] Final QA: every internal link works, npm run build succeeds, no console errors
 
 ## Known issues

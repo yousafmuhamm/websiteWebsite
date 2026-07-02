@@ -38,6 +38,9 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* The off-canvas menu sits translated beyond the right edge;
+     clip stops it from creating horizontal scroll. */
+  overflow-x: clip;
 }
 
 body {
@@ -123,7 +126,7 @@ h1, h2, h3, h4 {
 }
 
 .h-display {
-  font-size: clamp(2.4rem, 5.4vw, 4.25rem);
+  font-size: clamp(2rem, 5.4vw, 4.25rem);
   letter-spacing: 0.02em;
 }
 
@@ -421,6 +424,8 @@ h1, h2, h3, h4 {
 .hero__content {
   position: relative;
   z-index: 1;
+  width: 100%; /* flex item: stop min-content sizing from overflowing the viewport */
+  min-width: 0;
   max-width: 880px;
 }
 
@@ -473,6 +478,8 @@ h1, h2, h3, h4 {
 .field input,
 .field select,
 .field textarea {
+  width: 100%;
+  min-width: 0; /* keep long <option> text from widening the layout */
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 300;
