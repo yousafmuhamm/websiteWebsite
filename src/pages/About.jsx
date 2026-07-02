@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.jsx'
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import Reveal from '../components/Reveal.jsx'
 import TestimonialCarousel from '../components/TestimonialCarousel.jsx'
+import imgExteriorModern from '../assets/images/exterior-dusk-modern.jpg'
 import { HOME_TESTIMONIALS } from '../data/testimonials.js'
 import { WHY_WEST_PINE } from '../data/features.js'
 
@@ -14,14 +15,16 @@ function About() {
         eyebrow="About Us"
         title="Built on Trust, Hospitality & Experience"
         lead="A family-owned business, treating every property as our own and every guest as family."
-        photoLabel="Hero Photo — The Founders at a West Pine Property"
+        image={imgExteriorModern}
+        imageAlt=""
       />
 
       {/* Our story */}
       <section className="section">
         <div className="container split">
           <Reveal>
-            <PlaceholderImage label="Photo — Founders Portrait" aspect="4/5" />
+            {/* Stays a placeholder on purpose: needs the actual founders, not stock. */}
+            <PlaceholderImage label="Photo — Founders Portrait" aspect="4/5" frameless />
           </Reveal>
           <Reveal delay={150}>
             <span className="eyebrow">Our Story</span>

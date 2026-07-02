@@ -16,6 +16,9 @@ import heroPoster from '../assets/images/bedroom-turndown.jpg'
 import imgKitchenIsland from '../assets/images/kitchen-island.jpg'
 import imgBedroomTurndown from '../assets/images/bedroom-turndown.jpg'
 import imgExteriorBlue from '../assets/images/exterior-dusk-blue.jpg'
+import imgLivingDining from '../assets/images/living-dining-suite.jpg'
+import imgLivingBright from '../assets/images/living-room-bright.jpg'
+import SiteImage from '../components/SiteImage.jsx'
 import './Home.css'
 
 const OWNER_STORY_STEPS = [
@@ -135,7 +138,11 @@ function Home() {
             </div>
           </Reveal>
           <Reveal delay={150}>
-            <PlaceholderImage label="Photo — Furnished Living Room Detail" aspect="4/5" />
+            <SiteImage
+              src={imgLivingDining}
+              alt="Furnished living and dining room in a West Pine-style suite"
+              aspect="4/5"
+            />
           </Reveal>
         </div>
       </section>
@@ -260,7 +267,11 @@ function Home() {
             </Button>
           </Reveal>
           <Reveal delay={150}>
-            <PlaceholderImage label="Photo — Family Settling Into Furnished Home" aspect="4/5" />
+            <SiteImage
+              src={imgLivingBright}
+              alt="Bright furnished living room ready for a family to move in"
+              aspect="4/5"
+            />
           </Reveal>
         </div>
       </section>
@@ -293,7 +304,12 @@ function Home() {
       <section className="section">
         <div className="container split">
           <Reveal>
-            <PlaceholderImage label="Photo — The Founders, West Pine Strategies" aspect="4/5" />
+            {/* Stays a placeholder on purpose: needs the actual founders, not stock. */}
+            <PlaceholderImage
+              label="Photo — The Founders, West Pine Strategies"
+              aspect="4/5"
+              frameless
+            />
           </Reveal>
           <Reveal delay={150}>
             <span className="eyebrow">About the Founders</span>

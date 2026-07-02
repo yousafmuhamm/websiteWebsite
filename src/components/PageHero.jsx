@@ -1,11 +1,18 @@
 import PlaceholderImage from './PlaceholderImage.jsx'
 import Reveal from './Reveal.jsx'
 
-/** Shared dark hero for the four subpages. */
-function PageHero({ eyebrow, title, lead, photoLabel, children }) {
+/**
+ * Shared dark hero for the four subpages. Pass `image` (and `imageAlt`)
+ * for real photography; without it the labeled placeholder renders.
+ */
+function PageHero({ eyebrow, title, lead, photoLabel, image, imageAlt = '', children }) {
   return (
     <section className="hero hero--page">
-      <PlaceholderImage label={photoLabel} variant="dark" fill />
+      {image ? (
+        <img className="hero__img" src={image} alt={imageAlt} />
+      ) : (
+        <PlaceholderImage label={photoLabel} variant="dark" fill />
+      )}
       <div className="hero__overlay" />
       <div className="container hero__content">
         <Reveal>

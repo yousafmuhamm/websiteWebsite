@@ -2,9 +2,11 @@ import Button from '../components/Button.jsx'
 import CtaBand from '../components/CtaBand.jsx'
 import IconFeatureGrid from '../components/IconFeatureGrid.jsx'
 import PageHero from '../components/PageHero.jsx'
-import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import Reveal from '../components/Reveal.jsx'
+import SiteImage from '../components/SiteImage.jsx'
 import TestimonialCarousel from '../components/TestimonialCarousel.jsx'
+import imgEstateDrive from '../assets/images/exterior-estate-drive.jpg'
+import imgBedroomTurndown from '../assets/images/bedroom-turndown.jpg'
 import { PARTNER_TESTIMONIALS } from '../data/testimonials.js'
 import { WHY_WEST_PINE } from '../data/features.js'
 
@@ -33,7 +35,8 @@ function Partners() {
         eyebrow="West Pine Partners"
         title="Luxury Property Management"
         lead="We run every aspect of your short-term rental, from guest communication and bookings to cleaning, maintenance and revenue."
-        photoLabel="Hero Photo — Managed Luxury Property"
+        image={imgEstateDrive}
+        imageAlt=""
       >
         <div className="btn-row">
           <Button to="/contact" variant="gold">
@@ -73,9 +76,9 @@ function Partners() {
       <section className="section section--dark">
         <div className="container split--reverse split">
           <Reveal>
-            <PlaceholderImage
-              label="Photo — Housekeeping Detail, Managed Property"
-              variant="dark"
+            <SiteImage
+              src={imgBedroomTurndown}
+              alt="Bed turned down to hotel standard in a managed property"
               aspect="4/5"
             />
           </Reveal>

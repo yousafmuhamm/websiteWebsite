@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PageHero from '../components/PageHero.jsx'
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import Reveal from '../components/Reveal.jsx'
+import imgLivingDining from '../assets/images/living-dining-suite.jpg'
 import './Contact.css'
 
 const INTEREST_OPTIONS = [
@@ -64,7 +65,8 @@ function Contact() {
         eyebrow="Get In Touch"
         title="Let's Start the Conversation"
         lead="Looking for a furnished home, or thinking about handing off the management of yours? Call or write, and you'll hear back from an owner, not a queue."
-        photoLabel="Hero Photo — West Pine Property Entrance"
+        image={imgLivingDining}
+        imageAlt=""
       />
 
       <section className="section">

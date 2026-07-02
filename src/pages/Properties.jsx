@@ -1,10 +1,12 @@
 import Button from '../components/Button.jsx'
 import CtaBand from '../components/CtaBand.jsx'
 import PageHero from '../components/PageHero.jsx'
-import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import PropertyCard from '../components/PropertyCard.jsx'
 import Reveal from '../components/Reveal.jsx'
+import SiteImage from '../components/SiteImage.jsx'
 import { PROPERTIES } from '../data/properties.js'
+import imgLivingBright from '../assets/images/living-room-bright.jpg'
+import imgKitchenIsland from '../assets/images/kitchen-island.jpg'
 
 const IDEAL_FOR = [
   'Insurance claims',
@@ -29,7 +31,8 @@ function Properties() {
         eyebrow="West Pine Properties"
         title="Luxury Furnished Accommodations"
         lead="A true home away from home during insurance claims, renovations, corporate relocations and long executive stays."
-        photoLabel="Hero Photo — Furnished Property Interior"
+        image={imgLivingBright}
+        imageAlt=""
       >
         <div className="btn-row">
           <Button to="/contact" variant="gold">
@@ -109,7 +112,11 @@ function Properties() {
             </Button>
           </Reveal>
           <Reveal delay={150}>
-            <PlaceholderImage label="Photo — Move-In Day, Furnished Home" aspect="4/5" />
+            <SiteImage
+              src={imgKitchenIsland}
+              alt="Fully stocked kitchen ready for a long-term stay"
+              aspect="4/5"
+            />
           </Reveal>
         </div>
       </section>

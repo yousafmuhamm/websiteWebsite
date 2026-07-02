@@ -21,7 +21,7 @@
 - [x] Hover polish on cards, buttons, and nav links (hover-capable pointers only)
 - [x] Typography scale-up + tighter tracking on display headings
 - [x] Full-screen mobile nav takeover
-- [ ] Wire in real placeholder photography from the provided resource list
+- [x] Wire in real placeholder photography (Mixkit video + Pexels/Unsplash stills; founders portrait and map stay labeled placeholders on purpose)
 - [ ] Final cross-browser/responsive QA of the refinement pass
 
 Note on item 1: the header was already transparent until scrollY > 40 (the
