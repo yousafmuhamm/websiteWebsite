@@ -1,0 +1,40 @@
+.prop-card__body {
+  padding-top: 24px;
+}
+
+.prop-card__location {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.section--dark .prop-card__location {
+  color: var(--gold-light);
+}
+
+.prop-card__name {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.prop-card__specs {
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #6f6a5c;
+  margin-bottom: 12px;
+}
+
+.section--dark .prop-card__specs {
+  color: var(--stone);
+}
+
+.prop-card__blurb {
+  font-weight: 300;
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+}
