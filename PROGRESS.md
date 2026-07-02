@@ -5,7 +5,7 @@
 - [x] Shared components: Header/Nav, Footer, PlaceholderImage, Button
 - [x] Home page — all sections
 - [x] Properties page (West Pine Properties)
-- [ ] Partners page (West Pine Partners)
+- [x] Partners page (West Pine Partners)
 - [ ] About page
 - [ ] Contact page (with working client-side form validation)
 - [x] Testimonial carousel component (shared, reusable)
