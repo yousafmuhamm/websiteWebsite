@@ -132,7 +132,7 @@
   text-transform: uppercase;
   padding-bottom: 5px;
   border-bottom: 1px solid transparent;
-  transition: color 0.3s, border-color 0.3s;
+  transition: color 0.4s var(--ease), border-color 0.4s var(--ease);
 }
 
 .header__nav a:hover {

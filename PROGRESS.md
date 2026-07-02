@@ -18,7 +18,7 @@
 - [x] Looping muted background video on homepage hero
 - [x] Sticky-image scroll-story section — piloted on Home "For Property Owners"; extend to other sections only after client sign-off
 - [x] Full-bleed imagery pass (SiteImage component + frameless placeholders; borders kept on small grid cards)
-- [ ] Hover polish on cards, buttons, and nav links
+- [x] Hover polish on cards, buttons, and nav links (hover-capable pointers only)
 - [ ] Typography scale-up + tighter tracking on display headings
 - [ ] Full-screen mobile nav takeover
 - [ ] Wire in real placeholder photography from the provided resource list

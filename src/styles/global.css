@@ -111,6 +111,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-serif);
   font-weight: 500;
   line-height: 1.1;
+  letter-spacing: -0.01em;
   color: inherit;
 }
 
@@ -126,12 +127,12 @@ h1, h2, h3, h4 {
 }
 
 .h-display {
-  font-size: clamp(2rem, 5.4vw, 4.25rem);
+  font-size: clamp(2rem, 5.9vw, 5.1rem);
   letter-spacing: 0.02em;
 }
 
 .h-section {
-  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  font-size: clamp(1.9rem, 3.9vw, 3.3rem);
 }
 
 .h-card {
@@ -216,8 +217,21 @@ h1, h2, h3, h4 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   border: 1px solid transparent;
-  transition: background-color 0.3s var(--ease), color 0.3s var(--ease),
-    border-color 0.3s var(--ease);
+  transition: background-color 0.4s var(--ease), color 0.4s var(--ease),
+    border-color 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+/* Hover-capable pointers only, so touch devices never get stuck states. */
+@media (hover: hover) {
+  .btn:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover {
+    transform: none;
+  }
 }
 
 .btn--primary {
@@ -438,7 +452,7 @@ h1, h2, h3, h4 {
 
 .hero h1 {
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   margin-bottom: 26px;
 }
 
