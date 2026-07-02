@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button.jsx'
 import CtaBand from '../components/CtaBand.jsx'
@@ -9,6 +10,8 @@ import TestimonialCarousel from '../components/TestimonialCarousel.jsx'
 import { FEATURED_PROPERTIES } from '../data/properties.js'
 import { HOME_TESTIMONIALS } from '../data/testimonials.js'
 import { WHY_WEST_PINE } from '../data/features.js'
+import heroVideo from '../assets/video/hero-suite-pan.mp4'
+import heroPoster from '../assets/images/bedroom-turndown.jpg'
 import './Home.css'
 
 const OWNER_CHECKLIST = [
@@ -31,11 +34,40 @@ const RELOCATION_REASONS = [
 ]
 
 function Home() {
+  const videoRef = useRef(null)
+
+  // Respect reduced-motion: leave the poster frame instead of looping video.
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return undefined
+    const query = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const apply = () => {
+      if (query.matches) video.pause()
+      else video.play().catch(() => {})
+    }
+    apply()
+    query.addEventListener('change', apply)
+    return () => query.removeEventListener('change', apply)
+  }, [])
+
   return (
     <>
       {/* 1 — Hero */}
       <section className="hero">
-        <PlaceholderImage label="Hero Photo — Signature Furnished Property" variant="dark" fill />
+        <video
+          ref={videoRef}
+          className="hero__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroPoster}
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         <div className="hero__overlay" />
         <div className="container hero__content">
           <Reveal>
