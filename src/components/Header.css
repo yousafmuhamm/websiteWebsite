@@ -40,9 +40,9 @@
 
 .header__phone {
   justify-self: start;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--gold-light);
   transition: color 0.3s;
 }
