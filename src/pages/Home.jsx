@@ -75,7 +75,13 @@ function Home() {
     }
     apply()
     query.addEventListener('change', apply)
-    return () => query.removeEventListener('change', apply)
+    // The autoplay attribute can start playback after the initial pause
+    // (media not yet loaded when the effect ran), so re-check on playing.
+    video.addEventListener('playing', apply)
+    return () => {
+      query.removeEventListener('change', apply)
+      video.removeEventListener('playing', apply)
+    }
   }, [])
 
   return (

@@ -46,7 +46,7 @@
 }
 
 .story__close {
-  padding-block: 12vh;
+  padding-block: 10vh 0;
 }
 
 .story__media {

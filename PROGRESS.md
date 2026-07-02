@@ -22,13 +22,25 @@
 - [x] Typography scale-up + tighter tracking on display headings
 - [x] Full-screen mobile nav takeover
 - [x] Wire in real placeholder photography (Mixkit video + Pexels/Unsplash stills; founders portrait and map stay labeled placeholders on purpose)
-- [ ] Final cross-browser/responsive QA of the refinement pass
+- [x] Final cross-browser/responsive QA of the refinement pass
 
 Note on item 1: the header was already transparent until scrollY > 40 (the
 `.header--scrolled` class gates background/shadow/padding from one scroll
 listener). What reads as a "solid bar" at the top is the dark hero behind it.
 The refinement adds a stronger top scrim so nav text stays legible over
 bright video frames.
+
+## Refinement notes
+
+- Scroll-story pilot shipped on Home "For Property Owners" only. It reads
+  well at desktop; extend to Properties/Partners sections only after client
+  sign-off.
+- Reduced-motion video pause is implemented (matchMedia + change/playing
+  listeners) but browser emulation of prefers-reduced-motion was not
+  available in the QA harness, so that path is verified by code review, not
+  end-to-end. Worth one manual check in macOS System Settings before launch.
+- Hero video is Mixkit #4196 at 720p (5.5 MB). If launch performance audits
+  flag it, re-encode to ~2 MB H.264 or swap to a poster-only hero on mobile.
 
 ## Known issues
 
